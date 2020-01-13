@@ -31,21 +31,30 @@ header div ul li a{
 body{
     margin: 0%;
     padding: 0%;
-    background-color: black;
+    background-color: #e5ddd5;
     color: white;
 }
 #cards{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+
 }
 #tam{
     height: 20rem;
+
 }
 #pos{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    background-color: whitesmoke;
+    margin: 1.2rem;
 }
 #tot{
+    display: flex;
     height: 100%;
+    justify-content: center;
+}
+#nome{
+    text-align: center;
+    color: black;
 }

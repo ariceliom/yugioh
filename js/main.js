@@ -10,7 +10,9 @@ function show(jjson) {
         let view = `
                     <div id="pos"> 
                         <p id="nome">${jjson[0][i].name}</p>
-                        <a href="https://storage.googleapis.com/ygoprodeck.com/pics/${jjson[0][i].id}.jpg" id="tot"><img src="https://storage.googleapis.com/ygoprodeck.com/pics/${jjson[0][i].id}.jpg" id="tam"></img></a>
+                        <div id="tot">
+                            <a href="https://storage.googleapis.com/ygoprodeck.com/pics/${jjson[0][i].id}.jpg"><img src="https://storage.googleapis.com/ygoprodeck.com/pics/${jjson[0][i].id}.jpg" id="tam"></img></a>
+                        </div>
                     </div>`
         cards.insertAdjacentHTML('beforeend', view)
     }
@@ -25,6 +27,7 @@ function show(jjson) {
 }
 
 cards.addEventListener('click', function(event){
-    
+    let vars = document.getElementById("tam").getAttribute("src");
+    alert(vars)
 })
 
