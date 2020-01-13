@@ -1,0 +1,53 @@
+header{
+    width: 100%;
+    margin-top: -1rem;
+    background-color: rgb(27, 27, 27);
+    color: white;
+    height: 30rem;
+}
+
+header div ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin-bottom: 0%;
+    height: 100%;
+    align-items: center;
+}
+header div ul li{
+    font-size: 1.2rem;
+}
+header div ul li a{
+    text-decoration: none;
+    color: white;
+}
+#head{
+    height: 100%;
+    background-image: url("../img/head.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    border-bottom: solid white;
+}
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: black;
+    color: white;
+}
+#cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#tam{
+    height: 20rem;
+}
+#pos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+#tot{
+    height: 100%; 
+    justify-content: center;
+}
