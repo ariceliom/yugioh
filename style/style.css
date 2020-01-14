@@ -79,12 +79,12 @@ body{
 .grow:hover{
     transform: scale(1.2);
 }
-main div:first-child{
+.center{
     display: flex;
     justify-content: center;
     margin-top: 1.2rem;
 }
-main div h1{
+#title{
     color: white;
     width: 10%;
     text-align: center;

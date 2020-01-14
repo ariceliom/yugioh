@@ -1,0 +1,34 @@
+#formatação{
+    text-align: center;
+    font-size: 4rem;
+    color: black;
+}
+#cent{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#grid-descr{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    background-color: whitesmoke;
+}
+.ps1{
+    grid-row: 1 / 7;
+    grid-column: 1 / 2;
+}
+.ps2{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    margin: 0;
+    border-top: solid rgb(218, 218, 218);
+    border-bottom: solid rgb(218, 218, 218);
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+}
+.p-format{
+    margin:0;
+}

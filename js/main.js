@@ -8,7 +8,7 @@ fetch('https://db.ygoprodeck.com/api/v4/cardinfo.php')
 function show(jjson) {
     for(i = 0; i<20; i++){
         let view = `
-                    <div id="pos"> 
+                    <div id="pos" class="center"> 
                         <p id="nome">${jjson[0][i].name}</p>
                         <div id="tot" class="grow">
                             <img onclick="link('${jjson[0][i].id}')" src="${jjson[0][i].image_url}" id="tam"></img>
