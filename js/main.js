@@ -10,8 +10,11 @@ function show(jjson) {
         let view = `
                     <div id="pos"> 
                         <p id="nome">${jjson[0][i].name}</p>
-                        <div id="tot">
-                            <a href="https://storage.googleapis.com/ygoprodeck.com/pics/${jjson[0][i].id}.jpg"><img src="https://storage.googleapis.com/ygoprodeck.com/pics/${jjson[0][i].id}.jpg" id="tam"></img></a>
+                        <div id="tot" class="grow">
+                            <img onclick="link('${jjson[0][i].id}')" src="${jjson[0][i].image_url}" id="tam"></img>
+                        </div>
+                        <div id="flex-cent">
+                            <p id="price_color">Preço: <span>R$</span>${Number(jjson[0][i].cardmarket_price).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</p>
                         </div>
                     </div>`
         cards.insertAdjacentHTML('beforeend', view)
@@ -20,14 +23,14 @@ function show(jjson) {
     //     let view = `
     //                 <div id="pos"> 
     //                     <p id="nome">${i.name}</p>
-    //                     <a href="https://storage.googleapis.com/ygoprodeck.com/pics/${i.id}.jpg" id="tot"><img src="https://storage.googleapis.com/ygoprodeck.com/pics/${i.id}.jpg" id="tam"></img></a>
+    //                     <a href="${jjson[0][i].image_url}" id="tot"><img src="${jjson[0][i].image_url}" id="tam"></img></a>
     //                 </div>`
     //     cards.insertAdjacentHTML('beforeend', view)
     // }
 }
 
-cards.addEventListener('click', function(event){
-    let vars = document.getElementById("tam").getAttribute("src");
-    alert(vars)
-})
+let link = function(valor){
+    window.location = "card-page.html?minhaVariavel="+valor;
+}
+
 

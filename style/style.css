@@ -40,14 +40,15 @@ body{
 
 }
 #tam{
-    height: 20rem;
-
+    height: 18rem;
 }
 #pos{
     display: flex;
     flex-direction: column;
     background-color: whitesmoke;
     margin: 1.2rem;
+    border-radius: 10px;
+    height: 25rem;
 }
 #tot{
     display: flex;
@@ -57,4 +58,36 @@ body{
 #nome{
     text-align: center;
     color: black;
+    font-weight: bold;
+}
+#price_color{
+    text-align: center;
+    color: whitesmoke;
+    font-weight: bold;
+    background-color: rgb(253, 143, 0);
+    border-radius: 10px;
+    width: 8rem;
+}
+#flex-cent{
+    display: flex;
+    justify-content: center;
+}
+.grow{
+    transition: transform 1s;
+    will-change: scale;
+}
+.grow:hover{
+    transform: scale(1.2);
+}
+main div:first-child{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.2rem;
+}
+main div h1{
+    color: white;
+    width: 10%;
+    text-align: center;
+    background-color: orange;
+    border-radius: 10px;
 }
