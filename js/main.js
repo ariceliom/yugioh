@@ -30,7 +30,7 @@ function show(jjson) {
 }
 
 let link = function(valor){
-    window.location = "card-page.html?minhaVariavel="+valor;
+    window.location = "card-page.html?="+valor;
 }
 
 
