@@ -1,4 +1,5 @@
 // https://db.ygoprodeck.com/api/v4/cardinfo.php
+// https://db.ygoprodeck.com/api/v4/cardinfo.php?banlist=tcg&sort=name    -Banlist
 const cards = document.querySelector('#cards')
 
 fetch('https://db.ygoprodeck.com/api/v4/cardinfo.php')

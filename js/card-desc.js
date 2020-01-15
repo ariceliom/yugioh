@@ -20,9 +20,25 @@ function show(jjson){
                 <div id="cent">
                     <div id="grid-descr">
                         <aside class="ps1"><img src="https://storage.googleapis.com/ygoprodeck.com/pics/${jjson[0][0].id}.jpg"></img></aside>
-                        <div class="ps2"><p class="p-format">Tipo: ${jjson[0][0].type}</p></div>
+                        <div class="ps2"><p class="p-format"> Tipo: ${jjson[0][0].race}  ${jjson[0][0].type} </p></div>
+                        <div class="ps3"><p class="p-format"> Preço Medio: R$: ${Number(jjson[0][0].cardmarket_price).toLocaleString('pt-BR', { minimumFractionDigits: 2 })} </p></div>
+                        <div class="no-color"></div>
                     </div>
                 </div>`
+
     descshow.insertAdjacentHTML('beforeend', view)
-    alert(jjson[0][0].name)
+
+    const monster = document.querySelector("#grid-descr")
+    let tipo = jjson[0][0].type.split(" ")
+
+    if(tipo[tipo.length-1] == "Monster"){
+        let view_monster = `<div class="ps4"><p class="p-format"> Atk: ${jjson[0][0].atk} Def: ${jjson[0][0].def}  Atributo: ${jjson[0][0].attribute}</p></div>
+                            <div class="ps5"><div id="wid"><p class="p-format"> Descrição: ${jjson[0][0].desc} </p></div></div`
+        monster.insertAdjacentHTML('beforeend', view_monster)
+    }
+    else{
+        let view_monster = `<div class="ps6"><div id="wid"><p class="p-format"> Descrição: ${jjson[0][0].desc} </p></div></div`
+        monster.insertAdjacentHTML('beforeend', view_monster)
+    }
+
 }
