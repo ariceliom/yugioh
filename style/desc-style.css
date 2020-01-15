@@ -12,74 +12,21 @@
     width: 63%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(6, 1fr);
     background-color: whitesmoke;
 }
-#wid{
-    width: 96%;
-}
 .ps1{
-    grid-row: 1 / 7;
-    grid-column: 1 / 2;
+    grid-column: 1/2;
 }
 .ps2{
-    grid-row: 1/2;
     grid-column: 2/3;
     margin: 0;
-    border-top: solid rgb(218, 218, 218);
-    border-bottom: solid rgb(218, 218, 218);
     color: black;
     font-size: 1.5rem;
-    display: flex;
-    align-items: flex-end;
+    height: 5rem;
 }
-.ps3{
-    grid-row: 2/3;
-    grid-column: 2/3;
-    margin: 0;
+.bord{
     border-top: solid rgb(218, 218, 218);
-    border-bottom: solid rgb(218, 218, 218);
-    color: black;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: flex-end;
-}
-.ps4{
-    grid-row: 3/4;
-    grid-column: 2/4;
-    margin: 0;
-    border-top: solid rgb(218, 218, 218);
-    border-bottom: solid rgb(218, 218, 218);
-    color: black;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: flex-end;
-}
-.ps5{
-    grid-row: 4/7;
-    grid-column: 2/4;
-    margin: 0;
-    border-top: solid rgb(218, 218, 218);
-    border-bottom: solid rgb(218, 218, 218);
-    color: black;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-}
-.ps6{
-    grid-row: 3/7;
-    grid-column: 2/4;
-    margin: 0;
-    border-top: solid rgb(218, 218, 218);
-    border-bottom: solid rgb(218, 218, 218);
-    color: black;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
+    padding-top: 5%;
 }
 .p-format{
     margin:0;
