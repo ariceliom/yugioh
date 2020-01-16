@@ -36,9 +36,11 @@ function show(jjson){
     descshow.insertAdjacentHTML('beforeend', view)
 
     const monster = document.querySelector("#bef-end")
-    let tipo = jjson[0][0].type.split(" ")
+    let tipo = jjson[0][0].type
+    let regex = /Monster$/gm
+    let igual = tipo.match(regex)
 
-    if(tipo[tipo.length-1] == "Monster"){
+    if(igual != null){
         let view_monster = `<tr>
                                 <td class="bord"><p class="p-format"> Atk: ${jjson[0][0].atk} Def: ${jjson[0][0].def}  Atributo: ${jjson[0][0].attribute}</p></td>
                             </tr>
@@ -49,7 +51,9 @@ function show(jjson){
         monster.insertAdjacentHTML('beforeend', view_monster)
     }
     else{
-        let view_monster = `<div class="ps6"><div id="wid"><p class="p-format"> Descrição: ${jjson[0][0].desc} </p></div></div`
+        let view_monster = `<tr>
+                                <td class="bord"><p class="p-format"> Descrição: ${jjson[0][0].desc} </p></td>
+                            </tr>`
         monster.insertAdjacentHTML('beforeend', view_monster)
     }
 
