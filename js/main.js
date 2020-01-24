@@ -2,15 +2,16 @@
 // https://db.ygoprodeck.com/api/v4/cardinfo.php?banlist=tcg&sort=name    -Banlist
 const cards = document.querySelector('#cards')
 
+
 fetch('https://db.ygoprodeck.com/api/v4/cardinfo.php')
     .then(res => res.json())
     .then(json => show(json))
 
 function show(jjson) {
-    for(i = 0; i<20; i++){
+    for(i = 0; i<40; i++){
         let view = `
-                    <div id="pos" class="center"> 
-                        <p id="nome">${jjson[0][i].name}</p>
+                    <div id="pos" class="center">
+                        <p id="nome"><a href="#">${jjson[0][i].name}</a></p>
                         <div id="tot" class="grow">
                             <img onclick="link('${jjson[0][i].id}')" src="${jjson[0][i].image_url}" id="tam"></img>
                         </div>
@@ -20,6 +21,8 @@ function show(jjson) {
                     </div>`
         cards.insertAdjacentHTML('beforeend', view)
     }
+}
+
     // for(i of jjson[0]){
     //     let view = `
     //                 <div id="pos"> 
@@ -28,10 +31,8 @@ function show(jjson) {
     //                 </div>`
     //     cards.insertAdjacentHTML('beforeend', view)
     // }
-}
+
 
 let link = function(valor){
     window.location = "card-page.html?="+valor;
 }
-
-

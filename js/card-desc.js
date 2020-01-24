@@ -1,5 +1,7 @@
 const url = window.location.href
 const descshow = document.querySelector("#card-description")
+const txtt = document.querySelector(".modal-body")
+// data-toggle="modal" data-target="#modalcall"
 
 let stri = ''
 for(i=0; i<url.length;i++){
@@ -16,7 +18,7 @@ fetch(`https://db.ygoprodeck.com/api/v4/cardinfo.php?name=${stri}&la=english`)
 
 function show(jjson){
     let view = `
-                <h1 id="formatação">${jjson[0][0].name}</h1>
+                <h1 id="formatação">${jjson[0][0].name} <a href="#" data-toggle="modal" data-target="#modalcall"><i class="fas fa-asterisk"></i> </a> </h1>
                 <div id="cent">
                     <div id="grid-descr">
                         <aside class="ps1"><img src="https://storage.googleapis.com/ygoprodeck.com/pics/${jjson[0][0].id}.jpg"></img></aside>
@@ -33,14 +35,15 @@ function show(jjson){
                     </div>
                 </div>`
 
+    txtt.innerHTML = `<p>Veja também no Prices: <a href="https://yugiohprices.com/card_price?name=${jjson[0][0].name}">https://yugiohprices.com/card_price?name=${jjson[0][0].name}</p>`
     descshow.insertAdjacentHTML('beforeend', view)
 
     const monster = document.querySelector("#bef-end")
     let tipo = jjson[0][0].type
-    let regex = /Monster$/gm
-    let igual = tipo.match(regex)
+    let regExp = /Monster/
+    
 
-    if(igual != null){
+    if(regExp.test(tipo) == true){
         let view_monster = `<tr>
                                 <td class="bord"><p class="p-format"> Atk: ${jjson[0][0].atk} Def: ${jjson[0][0].def}  Atributo: ${jjson[0][0].attribute}</p></td>
                             </tr>
