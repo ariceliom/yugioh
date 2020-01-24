@@ -1,5 +1,3 @@
-// https://db.ygoprodeck.com/api/v4/cardinfo.php
-// https://db.ygoprodeck.com/api/v4/cardinfo.php?banlist=tcg&sort=name    -Banlist
 const cards = document.querySelector('#cards')
 
 
@@ -23,6 +21,10 @@ function show(jjson) {
     }
 }
 
+let link = function(valor){
+    window.location = "card-page.html?="+valor;
+}
+
     // for(i of jjson[0]){
     //     let view = `
     //                 <div id="pos"> 
@@ -31,8 +33,4 @@ function show(jjson) {
     //                 </div>`
     //     cards.insertAdjacentHTML('beforeend', view)
     // }
-
-
-let link = function(valor){
-    window.location = "card-page.html?="+valor;
-}
+    // ------------------ Para todas as cartas ^^^^^^ ----------------------

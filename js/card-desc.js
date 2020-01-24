@@ -1,7 +1,6 @@
 const url = window.location.href
 const descshow = document.querySelector("#card-description")
 const txtt = document.querySelector(".modal-body")
-// data-toggle="modal" data-target="#modalcall"
 
 let stri = ''
 for(i=0; i<url.length;i++){
