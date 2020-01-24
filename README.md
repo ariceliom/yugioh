@@ -1,5 +1,5 @@
-## Sistemas para Internet - Banco de Dados.
-## Projeto: Biblioteca
+## Sistemas para Internet - Linguagem Script
+## Projeto: Yugioh
 
 ### Grupo:
 - Francisco de Assis Ferreira de Oliveira Junior - 20191370024
